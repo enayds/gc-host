@@ -1,0 +1,862 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Poppins:ital,wght@0,400;0,500;0,600;1,200;1,300&display=swap');
+ 
+ * { 
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Montserrat', sans-serif;
+     color: white;
+     background: black;
+
+ }
+ a {
+    text-decoration: none;
+    color:white
+}
+
+section {
+    width: 100%; 
+    padding: 10px;
+}
+/* ------------------------------navigation style begins-------------------- */
+
+#navigation-panel{
+    position: fixed; 
+    box-shadow: 0 2px 2px 2px rgba(255, 255, 255, 0.932);
+    z-index: 777;
+    transition: .5s;
+    height: 124.03px;
+    width: 100%;
+}
+
+.nav-col {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.logo-image {
+    width: 15%;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.nav-links {
+    width: 50%;
+    margin: auto;
+    padding: 5px;
+}
+
+.link-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link-item {
+    list-style: none;
+    position: relative;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.2em;
+}
+
+.link-item a {
+    transition: .5s;
+}
+
+.link-item:hover a {
+    color: grey;
+}
+
+.underline {
+    border: 1px solid white;
+    position: absolute;
+    left: -100px;
+    top: -90%;
+    width: 167.71px;
+    opacity: 0;
+    transition: .7s;
+    background: white;
+    height: 0;
+}
+
+.link-item:hover .underline {
+    opacity: 1;
+    left: -40px;
+}
+
+
+/* ----------------side bar navigation styling-------------- */
+/* styling the sidebar for smaller screens */
+
+.side-bar {
+    width: 100%;
+    position: fixed;
+    z-index: 7777;
+    left: 0;
+    top: -1000px;
+    padding: 15px 0 0 35px;
+    transition: .6s;
+    padding-bottom: 40px;
+
+    
+
+}
+
+.side-bar.opened {
+    top: 0;
+}
+
+.side-bar-item {
+    margin-top: 40px;
+}
+
+.side-bar-item a {
+    color: white;
+}
+
+
+.white-underline {
+    
+    border: 1px solid white;
+    background: white;
+    width: 167.71px;
+    left: 10px;
+    top: -90%;
+    height: 0;
+}
+
+.home-white-underline {
+    width: 10%;
+}
+
+.link-item:hover .white-underline {
+    opacity: 1;
+    left: -10px;
+}
+
+
+
+.side-bar-btn{
+    background: black;
+    width: 50px;
+    margin-right: 25px;
+    margin-top: 25px;
+    padding: 10px;
+    height: 50px;
+    z-index: 999;
+    display: none;
+}
+
+
+
+.open-btn {
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: .5s;
+}
+
+.menu-btn {
+    width: 100%;
+    cursor: pointer;
+}
+
+
+/* ----------------media styling for smaller screens for sidebar nav ------------------------ */
+/* media screen for navigation bar <= 1200px */
+@media screen and (max-width:1300px) {
+    .link-item {
+    font-size: 18px;
+}
+.nav-links {
+    width: 80%;
+}
+
+.logo-image{
+    width: 25%;
+}
+}
+
+
+
+@media screen and (max-width:1000px) {
+    .logo-image{
+    width: 25%;
+    }
+    .nav-links {
+    width: 90%;;
+    }
+
+}
+
+@media screen and (max-width:940px) {
+.side-bar-btn {
+    display: block ;
+}
+
+.side-bar {
+    display: block;
+}
+
+.nav-links {
+    display: none;
+}
+
+
+
+.close-btn {
+    align-items: right;
+
+}
+    .logo-image {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width:840px) {
+    .logo-image {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .logo-image {
+        width: 26%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .logo-image {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .logo-image {
+        width: 30%;
+    }
+}
+/* ------------------------------navigation style ends-------------------- */
+
+/* ------------------------------hero1 style begins-------------------- */
+
+#hero1 {
+    padding-top: 130px;
+}
+
+.hero-container {
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 5px;
+    justify-content: space-evenly;
+}
+
+.hero-writeup {
+    flex-basis: 45%;
+    width: 100%;
+    margin-left: 25px;
+}
+
+.hero-writeup h1 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 78px;
+    margin: 5px 0;
+}
+
+.hero-writeup p {
+    margin-top: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    width: 464.97px;
+    height: 116px;
+}
+
+.contact-btn {
+    border: 1px solid white;
+    padding: 15px 10px;
+    border-radius: 2px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: inline-block; 
+    margin:auto;
+    margin-top: 80px;
+    text-align: center;
+    width: 30%;
+}
+
+.hero-image-container {
+    margin-top: 20px;
+    flex-basis: 45%;
+    margin-left: 5px;
+    width: 100%;
+}
+
+.hero-image {
+    /* width: 800.02px; 
+    height: 673.02px; */
+    width: 100%;
+}
+
+.pagebreak-div {
+    margin: 50px 60px 0;
+    width: 92%;
+    text-align: center;
+}
+
+.pagebreak-line {
+    display: inline-block;
+    width: 679.62px;
+    height: 0px;
+    background: white;
+    border: 1px solid white;
+}
+/* ----------------media styling for smaller screens for hero1 ------------------------ */
+
+
+@media screen and (max-width:1000px){
+    .hero-container {
+        flex-direction: column;
+        box-shadow: 0 2px 2px 2px rgba(255, 255, 255, 0.7);
+        padding: 15px;
+        margin: auto;
+    }
+
+    .hero-writeup {
+        margin-right: 15px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .left-float-btn {
+        float: right;
+    }
+
+    .hero-writeup h1{
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .hero-writeup p {
+        width: 92%;
+    }
+
+
+    .reverse-con {
+        flex-direction: column-reverse;
+    }
+
+    .hero-image-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .pagebreak-div {
+        margin: 50px auto 0 auto;
+    }
+
+    .pagebreak-line {
+        width: 400px;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .pagebreak-line {
+        width:250px;
+    }
+}
+/* ------------------------------hero1 style ends-------------------- */
+
+/* ------------------------------hero2 style begins-------------------- */
+#hero2 {
+    margin-top: 100px;
+}
+
+.left-div {
+    width: 100%;
+    flex-basis: 45%;
+}
+
+.right-div {
+    width: 100%;
+    flex-basis: 50%;
+    align-items: center;
+}
+
+.heading-div {
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.about-heading {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.underline-text {
+    display: inline-block;
+    width: 121.19px;
+    border: 1px solid white;
+    position: relative;
+    left: -30px;
+}
+
+.writeup-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    font-style: normal;
+    width: 88%;
+    margin-left: 10px;
+}
+
+.right-float-btn {
+    float: right;
+}
+
+/* ----------------media styling for smaller screens for hero2 ------------------------ */
+
+@media screen and (max-width:1300px) {
+
+    .hero-writeup h1 {
+        font-size: 45px;
+    }
+    .left-div {
+        flex-basis: 50%;
+    }
+
+    .right-div {
+        flex-basis: 45%;
+    }
+
+    .writeup-text {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+}
+@media screen and (max-width:1000px) {
+    .about-heading {
+        font-size: 35px;
+        margin: 20px auto 0 auto;
+    }
+
+    .underline-text {
+        left: -64px;
+    }
+
+    .writeup-text {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: justify;
+        width: 95%;
+    }
+
+    
+}
+/* ------------------------------hero2 style ends-------------------- */
+
+/* ------------------------------hero3 style starts-------------------- */
+
+#hero3 {
+    margin-top: 100px;
+}
+
+.about-underline {
+    left: -13px;
+}
+
+@media screen and (max-width:1000px) {
+    .about-underline {
+        left: -43px;
+    }
+}
+
+/* ------------------------------hero3 style ends-------------------- */
+
+/* ------------------------------footer style starts-------------------- */
+
+#bottom-panel {
+    background: black;
+    box-shadow:0px 0px 0px white, 0px -2px 2px white;
+}
+
+.bottom-nav-col {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    
+}
+
+.designer-info {
+    display:block;
+    flex-basis: 50%;
+    align-items: center;
+}
+.designer-info p {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+
+
+.bottom-nav-col a {
+    color: white;
+}
+
+.white-border {
+    border: 1px solid white;
+
+}
+
+/* ------------------------------footer style ends-------------------- */
+
+/* ------------------------------project page style starts-------------------- */
+
+.projects-container {
+    padding-top: 150px;
+    width: 92%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.projects-col {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+.projects-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin:80px auto;
+    
+}
+
+.projects-info {
+    flex-basis: 48%;
+    margin: 2px 10px;
+    text-align: center;
+}
+
+.project-image {
+    width: 100%;
+}
+
+.view-btn {
+    width: 70%;
+    text-align: center;
+    box-shadow: 0 5px 0px 0px grey;
+    padding: 7px 0;
+    transition: .7s;font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    margin-top: 20px;
+}
+
+.view-btn:hover {
+    transform: translateY(-5px);
+}
+
+.transparent-btn {
+    color: white;
+    background: transparent;
+    border: 1px white solid;
+    font-size: 20px;
+}
+
+.next-btn {
+    width: 15%;
+    display: inline-block;
+    text-align: center;
+    padding: 7px 0;
+    position: relative;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+
+.grey-slider {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: -150px;
+    background: grey;
+    height: 100%;
+    z-index: -1;
+    transition:  .5s;
+    opacity: 0;
+}
+
+.next-btn:hover .grey-slider {
+    left: 0;
+    opacity: 1;
+}
+
+.paginator {
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+/* styles for smaller screens for Projects page */
+@media screen and (max-width:1400px) {
+    .next-btn{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .transparent-btn {
+    font-size: 20px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    
+    .projects-row {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .view-btn {
+        float: none;
+        font-size: 23px;
+    }
+
+    .page-break-underline {
+        display: none;
+    }
+
+    .left-dets {
+        padding:50px  0;
+    }
+
+    .projects-info {
+        box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .next-btn {
+        width: 30%;
+        font-size: 20px;
+    }
+}
+
+.project-details {
+    padding-top: 150px;
+    width: 92%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.left-heading {
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
+.underline-det {
+    float:left;
+    left: 1px;
+}
+
+.project-writeup {
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.caret-left {
+    width: 20%;
+    
+}
+
+.previous-btn {
+    margin: 20px 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+}
+
+.previous-btn:hover {
+    transform: translateY(-5px);
+}
+
+.desc-images {
+    width: 100%;
+    margin: auto;
+    padding: 10px 8px;
+}
+
+.desc-images img {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.back-top {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.top-btn {
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: .5s;
+}
+
+.top-btn:hover {
+    transform: translateY(-5px);
+}
+
+.caret-up {
+    margin-left: 15px;
+
+}
+
+.overlay-image-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: -5px;
+    transition: .5s;
+    opacity: 0;
+    border-radius: 5px;
+}
+
+.overlay-image-container:hover .overlay {
+    opacity: .7;
+    bottom: 15%;
+}
+
+.overlay-title {
+    background: transparent;
+    color: black;
+    padding: 5px 10px;
+}
+
+/* media stylin for smaller screens */
+
+@media screen and (max-width:1440px) {
+    .previous-btn {
+        width: 250px;
+        font-size: 22px;
+    }
+
+    .top-btn{
+        width: 250px;
+        font-size: 22px;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .previous-btn {
+        float: left;
+    }
+
+    .top-btn {
+        float: none;
+    }
+
+    .project-writeup {
+        font-size: 17px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .overlay-title {
+        font-size: 15px;
+    }
+}
+
+
+/* ------------------------------project page style ends-------------------- */
+
+.about-text {
+    margin-top: 20px;
+}
+
+.about-container {
+    padding-top: 130px;
+}
+
+.caret-left {
+    width: 20%;
+}
+
+.previous-btn {
+    margin: 20px 0;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+    border: 1px solid white;
+    width: 252.63px;
+
+}
+
+.abt-previous-btn {
+    margin-left: 34px;
+}
+
+
+
+/* login form styling */
+
+.form-container {
+    margin-top: 100px;
+    padding-top: 100px;
+}
