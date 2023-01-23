@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="projects-container">
+        <div class="projects-col">
+            <div class="heading-div">
+                <h1 class="about-heading">Our 3D Models</h1>
+                <span class="underline-text"></span>
+            </div>
+            <div class="projects-row">
+
+                {% for project in projects %}
+                <div class="projects-info left-dets">
+                    <div class="overlay-image-container">
+                        <img src="{{ project.cover_image.url }}" alt="project image" class="project-image left-image">
+                        <span class="overlay">
+                            <h3 class="overlay-title">{{ project.name }}</h3>
+                        </span>
+                    </div>
+
+                    <a href="{% url 'project_details' project.id %}" class="contact-btn view-btn" ">View 3D Model</a>
+
+                </div>
+                    {% endfor %}
+
+            </div>
+
+            <div class="pagebreak-div">
+                <span class="pagebreak-line"></span>
+            </div>
+
+        </div>
+        {% if projects.has_previous %}
+            <a href="?page={{projects.previous_page_number}}" class="next-btn transparent-btn" style="margin-left: 10px;">PREVIOUS PAGE <span class="grey-slider"></span></a>
+        {% else %}
+        {% endif %}
+
+
+        {% if projects.has_next %}
+            <a href="?page={{projects.next_page_number}}" class="next-btn transparent-btn" style="margin-left: 10px;">NEXT PAGE <span class="grey-slider"></span></a>
+        {% else %}
+        {% endif %}
+
+        <div class="paginator">{{projects.number}} of {{projects.paginator.num_pages}}</div>
+    </div>
+    {% endblock content %}
+

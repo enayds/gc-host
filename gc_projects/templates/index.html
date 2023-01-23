@@ -1,0 +1,69 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<section id="hero1">
+    <div class="hero-container reverse-con">
+        <div class="hero-writeup " >
+           <h1> GCPROJECTS</h1>
+           <p>We undertake cost effective architectural building designs, construction and cost documentation</p>
+           <a href="https://api.whatsapp.com/send/?phone=2349037396586&text&type=phone_number&app_absent=0" class="contact-btn transparent-btn conc-btn left-float-btn">GET IN TOUCH</a>
+        </div>
+        <div class="hero-image-container">
+            <img src="{% static 'images/logo.jpg' %}" alt="" class="hero-image">
+        </div>
+
+    </div>
+</section>
+
+<div class="pagebreak-div">
+    <span class="pagebreak-line"></span>
+</div>
+
+<section id = "hero2">
+    <div class="hero-container ">
+        <div class="left-div">
+            <img src="{{project.cover_image.url}}" alt="" class="hero-image">
+        </div>
+        <div class="right-div">
+            <div class="heading-div">
+                <h1 class="about-heading">Our 3D Models</h1>
+                <span class="underline-text"></span>
+            </div>
+            
+            
+            <p class="writeup-text">Lorem ipsum dolor sit amet consectetur. Magna nisl at tellus at ut sapien felis. Euismod leo nunc eu at consectetur sed eget nibh placerat. Leo tortor pretium
+
+            accumsan purus volutpat eget. Tincidunt turpis suspendisse ac neque dignissim. Tincidunt sed convallis 
+                
+            sit suscipit purus. Erat cras lectus in tortor tristique amet. At volutpat interdum velit tincidunt.
+                
+            sit suscipit purus. Erat cras lectus in tortor tristique amet. At volutpat interdum velit tincidunt.</p>
+            <a href="{% url 'project_page' %}" class="contact-btn transparent-btn conc-btn right-float-btn" ">SEE MORE</a>
+        </div>
+    </div>
+</section>
+
+<div class="pagebreak-div">
+    <span class="pagebreak-line"></span>
+</div>
+
+<section id="hero3">
+    <div class="hero-container reverse-con">
+        <div class="right-div">
+            <div class="heading-div">
+                <h1 class="about-heading">About Us</h1>
+                <span class="underline-text about-underline"></span>
+            </div>
+            
+            <p class="writeup-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, rerum eos? Aut provident veritatis blanditiis accusamus recusandae nesciunt quasi atque ratione ipsam reprehenderit? Ex, perspiciatis neque! Modi accusamus quam amet dolorem magnam ea dicta cumque incidunt impedit maiores? Doloremque neque aperiam officia! Perferendis dolores iste necessitatibus reprehenderit nulla molestias odit.</p>
+            <a href="{% url 'about_page' %}" class="contact-btn transparent-btn conc-btn left-float-btn" ">READ MORE</a>
+        </div>
+
+        <div class="left-div">
+            <img src="{% static 'images/hero-2.jpg' %}" alt="" class="hero-image">
+        </div>
+    </div>
+    
+</section>
+{% endblock content %}

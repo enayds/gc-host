@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="about-container">
+        <div class="hero-container">
+            <div class="left-div">
+                <img src="{% static 'images/logo.jpg' %}" alt="logo image" class="hero-image">
+            </div>
+            <div class="right-div">
+                <div class="heading-div">
+                    <h1 class="about-heading">About Us</h1>
+                    <span class="underline-text about-underline"></span>
+                </div>
+                
+                
+                <p class="writeup-text about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio beatae asperiores nostrum officia rerum voluptas accusantium. Quasi, officia? Numquam accusantium aperiam explicabo neque mollitia perferendis quia est! Id, fugit veniam.</p>
+
+                <p class="writeup-text about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae amet maiores et beatae nemo rem quod non quaerat tempora excepturi, perferendis repellat eius ea perspiciatis, similique veritatis explicabo officia? Doloribus?</p>
+            </div>
+        </div>
+
+        <a href="projects.html" class=" previous-btn abt-previous-btn"> <img src="{% static 'images/double-caret-left-small.svg' %}" alt="" class="caret-left"> <p>PREVIOUS PAGE</p></a>
+
+    </div>
+{% endblock %}

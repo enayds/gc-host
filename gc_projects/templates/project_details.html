@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="project-details">
+        <div class="project-description">
+            <div class="heading-div">
+                <h1 class="about-heading left-heading">{{project}}</h1>
+                <span class="underline-text underline-det"></span>
+            </div>
+
+            <p class="project-writeup">{{ project.description }}</p>
+        </div>
+
+        <a href="{% url 'project_page' %}" class="contact-btn next-btn previous-btn"> <img src="{% static 'images/double-caret-left-small.svg' %}" alt="" class="caret-left"> <p>PREVIOUS PAGE</p></a>
+
+        <div class="desc-images">
+
+            <img src="{{project.cover_image.url}}" alt="project image">
+
+            {% if project.ImageUrl1 != '' %}
+            <img src="{{project.ImageUrl1}}" alt="other image">  
+            {% endif %} 
+            
+            {% if project.ImageUrl2 != '' %}
+            <img src="{{project.ImageUrl2}}" alt="other image">  
+            {% endif %} 
+
+            {% if project.ImageUrl3 != '' %}
+            <img src="{{project.ImageUrl3}}" alt="other image">  
+            {% endif %} 
+
+            {% if project.ImageUrl4 != '' %}
+            <img src="{{project.ImageUrl4}}" alt="other image">  
+            {% endif %} 
+
+
+
+        </div>
+
+        <div class="back-top">
+            <p class="transparent-btn next-btn top-btn"> BACK TO TOP <img src="{% static 'images/double-caret-up.svg' %}" alt="carets down image" class="caret-up"></p>
+        </div>
+    </div>
+
+    </div>
+{% endblock content %}
